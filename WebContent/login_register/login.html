@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>登录页面</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+     <script>
+	 $(document).ready(function(e) {
+        $('input').focusin(function(e) {
+                $(this).css('border-color','#009933');
+            });
+			$('input').focusout(function(e) {
+                $(this).css('border-color','');
+            });
+			$('#idp').click(function(e) {
+                if($(this).val() == '学号/工号')
+				{
+					$(this).val('');
+				}
+            });
+			$('#poss').click(function(e) {
+                $(this).val('');
+            });
+    });
+	 </script>
+    </head>
+    <body>
+        <div class="title">
+           <h1>&nbsp;</h1>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+        </div>
+        <div id="content">
+            <div class="login">
+            <p>&nbsp;</p>
+            <p><a href="index" style=" margin-left:300px;">首页</a></p>
+              <form action="login" method="post" id="form">
+              	<input type="text" name="id" id="idp" value="学号/工号" required/><br/>
+                <input type="password" name="pass" id="poss" value="密码" required/><br/>
+                <input type="submit" id="submit" value="确定" style="cursor:pointer;"/>
+              </form> 
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <h5 class="h5"><a href="register_">立即注册</a></h5> 
+            </div>
+        </div>
+    </body>
+     
+</html>

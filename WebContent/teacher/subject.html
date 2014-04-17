@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>试题管理</title>
+</head>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<body>
+        <div class="title">
+           <h1>&nbsp;</h1>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+        </div>
+        <div class="info">
+        	 <div class="info_02" style="width:100%; text-align:left;">
+            	<h6>&nbsp;</h6>
+               
+            	<p style="text-align:center;">增加试题 <a href="index" style="margin-left:550px;">首页</a></p>
+                <hr>
+                <h6>&nbsp;</h6>
+                <form method="post" action="subject_add" name="form">
+               	<table>
+                	<tr>
+                    	<td>题目:</td><td><textarea cols="30" rows="5" style="box-shadow:5px 2px 6px #009933;" name="question" required></textarea></td>
+                        <td>A选项:</td><td><textarea cols="30" rows="5" style="box-shadow:5px 2px 6px #009933;" name="A" required></textarea></td>
+                        <td>B选项:</td><td><textarea cols="30" rows="5" style="box-shadow:5px 2px 6px #009933;" name="B" required></textarea></td>
+                    </tr>
+                    <tr>
+                    	<td>C选项:</td><td><textarea cols="30" rows="5" style="box-shadow:5px 2px 6px #009933;" name="C" required></textarea></td>
+                        <td>D选项:</td><td><textarea cols="30" rows="5" style="box-shadow:5px 2px 6px #009933;" name="D" required></textarea></td>
+                        <td>答案详解:</td><td><textarea cols="30" rows="5" style="box-shadow:5px 2px 6px #009933;" name="Xj" required></textarea></td>
+                    </tr>
+                    <tr>
+                    	<td>答案:</td><td><input type="text" name="answer" required /></td>
+                        <td>试题类型:</td><td><input type="text" name="Lx" required /></td>
+                        <td>&nbsp;</td><td> <input type="submit" value="提交" style="width:50px; cursor:pointer;"/></td>
+                        <td>&nbsp;</td><td> <input type="reset" value="重置" style="width:50px; cursor:pointer;"/></td>
+                    </tr>
+                </table>
+               
+                
+               
+                 </form>
+            </div>
+           
+            
+           
+        </div>
+                   
+       
+       
+</body>
+</html>

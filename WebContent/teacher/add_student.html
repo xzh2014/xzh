@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>添加学生</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+      	<style>
+		.content{
+			width:70%;
+			height:450px;
+			background-color:#FFF;
+			margin-left:200px;
+			
+		}
+		.form{
+			text-align:center;
+			}
+		.input:hover{
+			cursor:pointer;
+		}
+		</style>
+    </head>
+    <body>
+        <div class="title">
+           <h1>&nbsp;</h1>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+        </div>
+        <div class="content">
+        	<p style="margin-left:10px;">添加学生
+            <a href="information_" style="text-decoration:none; margin-left:600px;">返回教师主页</a>
+            </p>
+            <hr>
+            <div class="form">
+            	<form method="post" enctype="multipart/form-data" action="addStudent">
+                <label style="margin-left:130px;">上传学生名单:</label><input type="file" name="upload" id="upload" required/>*请上传EXCLE文件<br>
+                <label style="margin-left:40px;">课程代码:</label><input type="text" name="id" id="id" required/><br>
+                <label style="margin-left:40px;">课程名称:</label><input type="text" name="name" id="name" required/><br><br>
+                <label style="margin-left:40px;">上课时间:</label><select name="time" id="time" style="width:200px; height:30px; font-size:16px;box-shadow:5px 2px 6px #009933;">
+                <option selected>请选择...</option>
+							<option value="周一第1节">周一第1节</option>
+							<option value="周一第2节">周一第2节</option>
+							<option value="周一第3节">周一第3节</option>
+							<option value="周一第4节">周一第4节</option>
+							<option value="周一第5节">周一第5节</option>
+							<option value="周一第6节">周一第6节</option>
+                            <option value="周二第1节">周二第1节</option>
+                            <option value="周二第2节">周二第2节</option>
+                            <option value="周二第3节">周二第3节</option>
+                            <option value="周二第4节">周二第4节</option>
+                            <option value="周二第5节">周二第5节</option>
+                            <option value="周二第6节">周二第6节</option>
+							<option value="周三第1节">周三第1节</option>
+                            <option value="周三第2节">周三第2节</option>
+                            <option value="周三第3节">周三第3节</option>
+                            <option value="周三第4节">周三第4节</option>
+                            <option value="周三第5节">周三第5节</option>
+                            <option value="周三第6节">周三第6节</option>
+                            <option value="周四第1节">周四第1节</option>
+                            <option value="周四第2节">周四第2节</option>
+                            <option value="周四第3节">周四第3节</option>
+                            <option value="周四第4节">周四第4节</option>
+                            <option value="周四第5节">周四第5节</option>
+                            <option value="周四第6节">周四第6节</option>
+                            <option value="周五第1节">周五第1节</option>
+                            <option value="周五第2节">周五第2节</option>
+                            <option value="周五第3节">周五第3节</option>
+                            <option value="周五第4节">周五第4节</option>
+                            <option value="周五第5节">周五第5节</option>
+                            <option value="周五第6节">周五第6节</option>
+							<option value="周六第1节">周六第1节</option>
+                            <option value="周六第2节">周六第2节</option>
+                            <option value="周六第3节">周六第3节</option>
+                            <option value="周六第4节">周六第4节</option>
+                            <option value="周六第5节">周六第5节</option>
+                            <option value="周六第6节">周六第6节</option>
+                </select><br>
+                <input type="submit" value="提交" style="width:60px;
+                height:30px; font-size:16px; margin-left:85px;" class="input"/>
+                <input type="reset" value="重置" style="width:60px;
+                height:30px; font-size:16px; margin-left:60px;" class="input"/>
+                </form>
+            </div>
+            
+        </div>
+    </body>
+</html>

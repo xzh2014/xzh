@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>注册页面</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <script src="js/jquery-2.1.0.min.js"></script>
+<style>
+.la{
+	margin-left:36px;
+}
+</style>
+	<script>
+		$(document).ready(function(e) {
+			$('input').focusin(function(e) {
+                $(this).css('border-color','#009933');
+            });
+			$('input').focusout(function(e) {
+                $(this).css('border-color','');
+            });
+			
+            $('#id').blur(function(e) {
+            	//alert("hh");
+                $.get("CheckId",$('#id').serializeArray(),function(data1,statusText){
+						$('#p').text(data1).css('color','red').show();
+					},"html");
+            });
+            $('#id').click(function(e){
+            	$('#p').text("").hide();
+            });
+            $('form').submit(function(e) {
+                var pass1 = $('#pass').val();
+            	var pass2 = $('#password2').val();
+            	//alert(pass1+" "+pass2);
+            	if(pass1 != pass2)
+            	{	
+            		$('p#pass').text('两次密码输入不相同,请重新输入!!!').css('color','red');
+            		$('input#pass').val('');
+            		$('input#password2').val('');
+            		return false;
+            	}
+            });
+            $('input#pass').click(function(){
+            	$('p#pass').text('');
+            });
+        });
+		
+	</script>
+    </head>
+    <body>
+        <div class="title">
+           <h1>&nbsp;</h1>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+        </div>
+        <div id="content">
+            <div class="login">
+              <h3 class="h5" style="margin-left:300px;"><a href="index.html">首页</a></h3> 
+              <form action="register" method="post" id="form">
+              	<input type="radio" name="role" value="s" checked="checked" style="width:auto; height:auto;">学生
+              	<input type="radio" name="role" value="t" style="width:auto; height:auto;">老师<br/>
+              	<!--  <span></span><br/>-->
+              	<p id="p"></p>
+              	<label for="username">学号/工号 </label><input type="text" name="id" id="id" required/><br/>
+                
+                <label for="username" class="la">姓名 </label><input type="text" name="username" id="username" required/><br/>
+                <label for="pass" class="la">密码 </label>
+                <input type="password" name="pass" id="pass" required/><br/>
+                <label for="qrpass">确认密码 </label>
+                <input type="password" name="password2" id="password2" required/><br/>
+                <p id="pass"></p>
+                <input type="submit" id="submit" value="注册" style=" width:auto;"/>
+                <input type="reset" id="reset" value="重置" style="width:auto; margin-left:30px;"/>
+              </form> 
+              
+             
+            </div>
+        </div>
+    </body>
+</html>

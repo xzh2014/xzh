@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+.login{
+				width:450px;
+   				height:350px;
+    			margin:0 auto;
+				position:relative;
+				background:#91EF4A url(images/bgItem.png) repeat-x top left;
+				border-radius:4px 4px;
+			}
+

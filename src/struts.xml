@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<!-- 指定Struts 2配置文件的根元素 -->
+<struts>
+	<!-- 指定全局国际化资源文件 -->
+	<constant name="struts.custom.i18n.resources" value="mess"/>
+	<!-- 指定国际化编码所使用的字符集 -->	
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<!-- 所有的Action定义都应该放在package下 -->
+	<package name="validforsevenday" extends="struts-default">
+		<action name="index">
+			<result name="success">/index.html</result>
+		</action>
+		<action name="login_">
+			<result name="success">/login_register/login.html</result>
+		</action>
+		<action name="register_">
+			<result name="success">/login_register/register.html</result>
+		</action>
+		<action name="show_status">
+			<result name="success">/teacher/status.jsp</result>
+		</action>
+		<!--  <action name="condition">
+			<result name="success">/teacher/condition.jsp</result>
+		</action>-->
+		<action name="show_status_class">
+			<result name="success">/teacher/status_class.jsp</result>
+		</action>
+		<action name="condition_class">
+			<result name="success">/teacher/condition_class.jsp</result>
+		</action>
+		<action name="delete_student">
+			<result name="success">/teacher/delete_student.jsp</result>
+		</action>
+		<action name="subject">
+			<result name="success">/teacher/subject.html</result>
+		</action>
+		<action name="rand">
+			<result name="success">/teacher/rand.jsp</result>
+		</action>
+		<action name="rand_student">
+			<result name="success">/teacher/rand_student.jsp</result>
+		</action>
+		<action name="skill">
+			<result name="success">/task/skill.jsp</result>
+		</action>
+		<action name="show_message">
+			<result name="success">/teacher/show_message.jsp</result>
+		</action>
+		<action name="record">
+			<result name="success">/teacher/record.jsp</result>
+		</action>
+		<action name="query_message">
+			<result name="success">/student/message.jsp</result>
+		</action>
+		
+		<action name="sign_in_" class="action.SessionAction" method="sign_in_">
+			<result name="success">/student/sign_in.jsp</result>
+			<result name="error">/login_register/login.html</result>
+		</action>
+		<action name="information" class="action.SessionAction" method="information">
+			<result name="success">/student/information.html</result>
+			<result name="error">/login_register/login.html</result>
+		</action>
+		<action name="information_" class="action.SessionAction" method="information_t">
+			<result name="success">/teacher/index.html</result>
+			<result name="error">/login_register/login.html</result>
+		</action>
+		<action name="information__" >
+			<result name="success">/teacher/information.html</result>
+		</action>
+		<action name="submit" class="action.SessionAction" method="submit">
+			<result name="success">/student/submit_work.html</result>
+			<result name="error">/login_register/login.html</result>
+		</action>
+		<action name="add_student" class="action.SessionAction" method="add_student">
+			<result name="success">/teacher/add_student.html</result>
+			<result name="error">/login_register/login.html</result>
+		</action>
+		
+		
+		
+		
+		<action name="login" class="action.Login_Register" method="login">
+			<result name="success_s">/student/index.html</result>
+			<result name="success_t">/teacher/index.html</result>
+			<result name="error">/login_register/login.html</result>
+		</action>
+		<action name="register" class="action.Login_Register" method="register">
+			<result name="success">/login_register/login.html</result>
+			<result name="error">/login_register/register_error.html</result>
+		</action>
+		<action name="s_update" class="action.Login_Register" method="s_update">
+			<result name="success">/index.html</result>
+			<result name="error">/login_register/register_error.html</result>
+		</action>
+		<action name="logout" class="action.Login_Register" method="logout">
+			<result name="success">/index.html</result>
+			<result name="error">/login_register/register_error.html</result>
+		</action>
+		<action name="sign_in" class="action.Login_Register" method="sign_in">
+			<result name="success">/index.html</result>
+			<result name="error">/login_register/register_error.html</result>
+		</action>
+		<action name="submit_work" class="action.Login_Register" method="submit_work">
+			<param name="savePath">/upload</param>
+			<result name="success">/student/upload_success.html</result>
+			<result name="error">/login_register/register_error.html</result>
+		</action>
+
+		
+		<action name="addStudent" class="action.TeacherAction" method="addStudent">
+			<result name="success">/teacher/upload_success.html</result>
+			<result name="error">/teacher/upload_error.html</result>
+		</action>
+		<action name="deleteStudent" class="action.TeacherAction" method="deleteStudent">
+			<result name="success">/teacher/upload_success.html</result>
+			<result name="error">/teacher/upload_error.html</result>
+		</action>
+		<action name="subject_add" class="action.TeacherAction" method="subject_add">
+			<result name="success">/teacher/upload_success.html</result>
+			<result name="error">/teacher/upload_error.html</result>
+		</action>
+		<action name="subject_update">
+			<result name="success">/teacher/subject_update.jsp</result>
+			<result name="error">/teacher/upload_error.html</result>
+		</action>
+		<action name="update_subject" class="action.TeacherAction" method="update_subject">
+			<result name="success">/teacher/subject_s.jsp</result>
+			<result name="error">/teacher/upload_error.html</result>
+		</action>
+		<action name="subject_" class="action.TeacherAction" method="subject_">
+			<result name="success">/teacher/subject_s.jsp</result>
+			<result name="error">/index.html</result>
+		</action>
+		
+		<action name="condition" class="action.TeacherAction" method="condition">
+			<result name="success">/teacher/condition.jsp</result>
+		</action>
+		<action name="add_count" class="action.TeacherAction" method="add_count">
+			<result name="success">/teacher/condition.jsp</result>
+			<result name="error">/index.html</result>
+		</action>
+		<action name="log_class" class="action.TeacherAction" method="log_class">
+			<result type="stream">
+	        <param name="contentType">text/html</param>
+	        <param name="inputName">inputStream</param>
+	    	</result>
+			<result name="error">/index.html</result>
+		</action>
+		
+		
+		<action name="message" class="action.MessageAction" method="message">
+			<result name="success">/leave_message/leave_message.jsp</result>
+			<result name="error">/login_register/login.html</result>
+		</action>
+		<action name="leaveMessage" class="action.MessageAction" method="leaveMessage">
+			<result name="success">/student/index.html</result>
+			<result name="error">/index.html</result>
+			
+		</action>
+		<action name="toMessage" class="action.MessageAction" method="toMessage">
+			<!--  <result name="success">/teacher/show_message.jsp</result>-->
+			<result name="error">/index.html</result>
+			<result type="stream">
+	        <param name="contentType">text/html</param>
+	        <param name="inputName">inputStream</param>
+	    	</result>
+		</action>
+		
+		
+		<action name="CheckId">
+			<result name="success">/CheckId</result>
+			<result name="error">/index.html</result>
+		</action>
+		
+		
+		<action name="*">
+			<result name="success">/index.html</result>
+		</action>
+	</package>
+</struts>

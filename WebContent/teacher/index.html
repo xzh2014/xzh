@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>教师主页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+      	<style>
+		.content{
+			width:70%;
+			height:450px;
+			background-color:#FFF;
+			margin-left:200px;
+			
+		}
+		.div{
+			float:left;
+			text-transform:uppercase;
+    		font-size: 18px;
+    		font-weight:bold;
+    		letter-spacing:-1px;
+    		display:block;
+    		line-height:90px;
+    		text-decoration:none;
+    		color:#fff;
+    		background:#91EF4A url(images/bgItem.png) repeat-x top left;
+    		outline:none;
+    		text-shadow:1px 1px 1px #888;
+    		-moz-box-shadow:1px 1px 3px #777;
+    		-webkit-box-shadow:1px 1px 3px #777;
+    		box-shadow:1px 1px 3px #777;
+			width:90px;
+			height:90px;
+			margin-top:10px;
+			margin-left:10px;
+			text-align:center;
+			opacity:0.8;	
+		}
+		.div > a{
+			text-decoration:none;
+			color:#FFF;
+		}
+		.div:hover{
+			cursor:pointer;
+			background-color:#933;
+		}
+		</style>
+        <script>
+			$(document).ready(function(e) {
+				
+            });
+		</script>
+    </head>
+    <body>
+        <div class="title">
+           <h1>&nbsp;</h1>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+           <h2>&nbsp;</h2>
+        </div>
+        <div class="content">
+        	<p style="margin-left:10px;">教师主页<a href="index" style="margin-left:850px;">首页</a></p>
+            <hr>
+           	<div class="div"> <a href="information__">个人管理</a></div> 
+           	<div class="div"> <a href="show_status">实验出勤率</a></div> 
+           	<div class="div"> <a href="show_status_class">上课出勤率</a></div>
+           	<div class="div"> <a href="rand">随机点名</a></div>
+          	<div class="div"> <a href="add_student">增加学生</a></div> 
+          	<div class="div"> <a href="delete_student">删除学生</a></div>
+            <div class="div"> <a href="">布置作业</a></div>
+            <div class="div"> <a href="subject">增加试题</a></div>
+             <div class="div" style="width:auto;"> <a href="subject_">删除/修改试题</a></div>
+            <div class="div"> <a href="show_message">查看留言</a></div> 
+            <div class="div"> <a href="">通知管理</a></div>
+           	<div class="div" style="width:auto;"> <a href="record">教学记录表</a></div>
+        </div>
+    </body>
+</html>
